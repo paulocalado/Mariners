@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0c1033">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageJogador" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textNomeJogador"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Posição:"
+        android:id="@+id/textViewPosicao"
+        android:layout_below="@+id/textNomeJogador"
+        android:layout_toRightOf="@+id/imageJogador"
+        android:layout_toEndOf="@+id/imageJogador"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Número:"
+        android:id="@+id/textViewNumero"
+        android:layout_below="@+id/textViewPosicao"
+        android:layout_toRightOf="@+id/imageJogador"
+        android:layout_toEndOf="@+id/imageJogador"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/txtNumero"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/textViewNumero"
+        android:layout_alignLeft="@+id/txtPosicao"
+        android:layout_alignStart="@+id/txtPosicao" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/txtPosicao"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/textNomeJogador"
+        android:layout_toRightOf="@+id/textViewPosicao"
+        android:layout_toEndOf="@+id/textViewPosicao" />
+
+</RelativeLayout>
