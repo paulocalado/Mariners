@@ -13,16 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 
-public class Home extends AppCompatActivity
+public class Jogos extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_jogos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -34,14 +32,6 @@ public class Home extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-
-        WebView wv =(WebView)findViewById(R.id.webViewHome);
-
-        WebSettings ws = wv.getSettings();
-        ws.setJavaScriptEnabled(true);
-        ws.setSupportZoom(false);
-
-        wv.loadUrl("http://www.recifemariners.com.br/");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -66,7 +56,7 @@ public class Home extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.jogos, menu);
         return true;
     }
 
@@ -92,12 +82,9 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_atletas) {
-            Intent intentAtletas = new Intent(Home.this, Atletas.class);
-            startActivity(intentAtletas);
-
+            Intent intentAtleta = new Intent(Jogos.this, Atletas.class);
+            startActivity(intentAtleta);
         } else if (id == R.id.nav_jogos) {
-            Intent intentJogos = new Intent(Home.this, Jogos.class);
-            startActivity(intentJogos);
 
         } else if (id == R.id.nav_tabela) {
 
